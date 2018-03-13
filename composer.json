@@ -1,0 +1,15 @@
+{
+    "name": "taalendigitaal/summernote-table-styles",
+    "description": "A Summernote plugin that adds a button to the table popover allowing the user to apply Bootstrap table styles.",
+    "type": "component",
+    "require": {
+        "robloach/component-installer": "*"
+    },
+    "extra": {
+        "component": {
+            "scripts": [
+                "summernote-table-styles.js"
+            ]
+        }
+    }
+}
