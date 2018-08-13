@@ -155,13 +155,15 @@
         var index = 0;
         var list = "";
 
-        for (const style of exclusiveStyles) {
+        for (var i = 0; i < exclusiveStyles.length; i++) {
+          var style = exclusiveStyles[i];
           list += self.getListItem(style, exclusiveLabels[index], true);
           index++;
         }
         list += '<hr style="margin: 5px 0px">';
         index = 0;
-        for (const style of inclusiveStyles) {
+        for (var i = 0; i < inclusiveStyles.length; i++) {
+          var style = inclusiveStyles[i];
           list += self.getListItem(style, inclusiveLabels[index], false);
           index++;
         }
@@ -171,7 +173,7 @@
       self.getListItem = function(
         value,
         label,
-        isExclusive,
+        isExclusive
       ) {
         var item =
           '<li><a href="#" class="' +
