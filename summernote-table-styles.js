@@ -81,8 +81,8 @@
       });
 
       self.updateTableStyles = function(chosenItem) {
-        const rng = context.invoke("createRange", $editable);
-        const dom = $.summernote.dom;
+        var rng = context.invoke("createRange", $editable);
+        var dom = $.summernote.dom;
         if (rng.isCollapsed() && rng.isOnCell()) {
           context.invoke("beforeCommand");
           var table = dom.ancestor(rng.commonAncestor(), dom.isTable);
@@ -96,8 +96,8 @@
 
       /* Makes sure the check marks are on the currently applied styles */
       self.updateTableMenuState = function($dropdownButton) {
-        const rng = context.invoke("createRange", $editable);
-        const dom = $.summernote.dom;
+        var rng = context.invoke("createRange", $editable);
+        var dom = $.summernote.dom;
         if (rng.isCollapsed() && rng.isOnCell()) {
           var $table = $(dom.ancestor(rng.commonAncestor(), dom.isTable));
           var $listItems = $dropdownButton.next().find("a");
